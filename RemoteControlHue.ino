@@ -43,9 +43,7 @@ void setup() {
 
 void loop() {
   delay(100);
-  Serial.println("Cheching buttons!");
   checkButton();
-  Serial.println("Sending Everything!");
   sendCommand();
 }
 
@@ -53,9 +51,6 @@ bool checkButton() {
   bool state = true;
   for (int i = 0; i < amountButtons; i++) {
     buttonState[i] = digitalRead(buttons[i]);
-    Serial.print(i);
-    Serial.print(" ");
-    Serial.println(buttonState[i]);
     if (buttonState[i] == false)
       state = false;
   }
