@@ -3,7 +3,7 @@
 #include "ESP8266WebServer.h"
 #include "credentials.h"
 
-const char* host = "192.168.0.132";
+const char* host = "192.168.0.136";
 
 #ifndef credentials
 const char *ssid = "vanikke";
@@ -73,6 +73,7 @@ void wifiConnect() {
   if (!CH.connect(host, sshPort)) {
     Serial.println("Connection Failed...");
   }
+  CH.println("name Remote1 ");
 
 }
 
